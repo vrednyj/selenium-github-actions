@@ -6,7 +6,11 @@ from webdriver_manager.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import time  
-from selenium.webdriver.common.keys import Keys  
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+#from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+#from selenium.webdriver.support.ui import 
 
 total_errors=0
 
@@ -32,19 +36,21 @@ print(driver.title)
 #driver.find_element_by_name("q").send_keys("javatpoint")  
 
 try:
-    build_selection = driver.find_element("name",'q')
-    build_selection.send_keys("What the time is now?")
+    search_field = driver.find_element("name",'q')
+    search_field.send_keys("What the time is now?")
 except Exception as e:
     total_errors +=1
     print(e)
 time.sleep(3)
 
 try:
-    build_selection = driver.find_element("name",'"btnK"')
-    build_selection.send_keys(Keys.ENTER)
+    search_button = driver.find_element("name",'"btnK"')
+    # search_button.send_keys(Keys.ENTER)
+    search_button.click()
 except Exception as e:
     total_errors +=1
     print(e)
 time.sleep(3)
+
 print("Total errors of this test: {}".format(total_errors))
 driver.close() #close the web page.
