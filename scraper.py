@@ -6,7 +6,7 @@ from webdriver_manager.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import time  
-from Selenium.webdriver.common.keys import Keys  
+from selenium.webdriver.common.keys import Keys  
 
 total_errors=0
 
