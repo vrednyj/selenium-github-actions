@@ -46,6 +46,5 @@ except Exception as e:
     total_errors +=1
     print(e)
 time.sleep(3)
-
-print("Total errors of this test: {}".format(total_errors)
+print("Total errors of this test: {}".format(total_errors))
 driver.close() #close the web page.
