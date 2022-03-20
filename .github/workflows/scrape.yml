@@ -1,4 +1,4 @@
-name: scrape
+name: Selenium testing
 on:
   workflow_dispatch:
 jobs:
