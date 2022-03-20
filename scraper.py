@@ -44,7 +44,7 @@ except Exception as e:
 time.sleep(3)
 
 try:
-    search_button = driver.find_element("name",'"btnK"')
+    search_button = driver.find_element("name",'btnK')
     # search_button.send_keys(Keys.ENTER)
     search_button.click()
 except Exception as e:
