@@ -1,6 +1,7 @@
 name: Selenium testing
 on:
-  workflow_dispatch:
+  push:
+    branches: [ main ]  
 jobs:
   scrape:
     runs-on: ubuntu-latest
