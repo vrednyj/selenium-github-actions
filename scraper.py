@@ -28,9 +28,8 @@ driver.get('https://www.google.com/')
 print(driver.title)
 #driver.find_element_by_name("q").send_keys("javatpoint")  
 
-#find_element(by=By.NAME, value=name)
-
-#time.sleep(3)  
+driver.find_element(by=By.NAME, value="q").send_keys("javapoint")
+time.sleep(3)  
 #click on the Google search button  
 #driver.find_element_by_name("btnK").send_keys(Keys.ENTER)  
 #time.sleep(3)  
