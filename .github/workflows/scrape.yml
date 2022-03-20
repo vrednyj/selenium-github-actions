@@ -2,6 +2,8 @@ name: Selenium testing
 on:
   push:
     branches: [ main ]  
+  pull_request:
+    branches: [ main ] 
 jobs:
   scrape:
     runs-on: ubuntu-latest
